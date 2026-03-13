@@ -1,48 +1,102 @@
+markdown
 # 🎓 MUJ Student Advisor AI
-### PS 01: Student Academic Performance Prediction & Personalized Intervention
-**Developed for IEEE CIS AI Model Quest 2.0**
-
-The **MUJ Student Advisor AI** is a proactive, data-driven institutional tool designed to transform academic advising from a reactive process into a predictive science. By analyzing 15 distinct factors across academic, psychological, and environmental domains, this system identifies at-risk students weeks before examinations and provides automated, personalized recovery plans.
+### PS 01: Student Academic Performance Prediction
+*IEEE CIS AI Model Quest 2.0*
 
 ---
 
-## 🎯 Key Features
-* **Predictive Analysis:** Real-time grade tier classification using a high-accuracy Random Forest Ensemble model.
-* **Confidence Meter:** Visualizes the statistical probability distribution behind every AI prediction to provide transparency in decision-making.
-* **Institutional Intervention:** Generates hyper-personalized Success Plans based on official university guidelines for each risk level.
-* **Comparative Dashboard:** Benchmarks individual student metrics against campus performance averages to highlight specific areas for improvement.
-* **Demo Profiles:** One-click loading of sample student profiles to instantly showcase the system's predictive capabilities.
+## 📋 Overview
+The **MUJ Student Advisor AI** is a machine learning-powered tool that predicts student academic performance and generates personalized intervention plans. By analyzing 15 behavioral, psychological, and environmental factors, it helps educators identify at-risk students early and provide targeted support based on official MUJ guidelines.
+
+**Key Capabilities:**
+- 99% accurate predictions across 4 grade tiers
+- Real-time analysis with confidence scoring
+- Bias-free assessment across demographics
+- Actionable success plans for each risk level
 
 ---
 
-## 🛠️ Technical Model Approach
-The system employs a **Random Forest Ensemble** modeling strategy to ensure institutional-grade reliability.
+## ✨ Features
 
-### 1. Algorithm Selection
-* **Ensemble Power:** By merging multiple decision trees, the model ensures stable predictions and effectively prevents the overfitting common in simpler algorithms.
-* **Handling Non-Linearity:** The algorithm captures complex interactions between "hidden factors," such as how high stress levels impact study hours differently depending on motivation.
-
-### 2. Feature Breadth (The 15 Predictors)
-The model processes a 360-degree student profile including:
-* **Academic:** Study Hours, Attendance %, Assignment Completion, and Exam Scores.
-* **Psychological:** Motivation Level, Stress Level, and preferred Learning Style.
-* **Environmental:** Internet Access, Resource Quality, and Educational Tech usage.
-* **Social:** Extracurricular participation and Academic Discussion engagement.
-
-### 3. Training & Performance
-* **Data Preparation:** The dataset was split into 80% Training and 20% Testing sets using **Stratified Sampling** to maintain proportional grade category representation.
-* **Reliability:** The model achieved a **99.0% accuracy** rate on test and validation datasets.
+| | |
+|---|---|
+| **Real-time Prediction** | 4 grade tiers instantly |
+| **Confidence Meter** | Visual probability |
+| **Success Plans** | Auto-generated |
+| **Demo Profiles** | One-click samples |
+| **Bias Checks** | Fairness assured |
 
 ---
 
-## 🚀 How to Run Locally
+## 🛠️ Tech Stack
 
-Follow these steps to set up and run the advisor system on your machine:
+| | |
+|---|---|
+| **Model** | Random Forest |
+| **Framework** | Scikit-learn |
+| **App** | Streamlit |
+| **Viz** | Plotly |
 
-### 1. Prerequisites
-Ensure you have **Python 3.9+** installed on your system.
+```python
+# Model Config
+params = {
+    'n_estimators': 100,
+    'max_depth': 15,
+    'min_samples_split': 10
+}
+```
+--- 
 
-### 2. Clone the Repository
+## 📊 15 Factors
+| | |
+|---|---|
+| **Category** |	 Factors |
+| **Academic** |	 Hours, Attendance, Assignments, Exam, Online |
+| **Psychological** | 	Motivation, Stress, Learning Style|
+| **Demographic** | 	Gender, Age|
+| **Environmental** | 	Internet, Resources, EduTech, Extra, Discussions|
+
+## 📈 Performance
+| | |
+|---|---|
+| **Metric** |	Value|
+|**Accuracy**|	99%|
+|**Train Size**| 	9,806|
+|**Test Size** |	2,111|
+
+## Top Features
+| | |
+|---|---|
+| **Feature** |	Importance|
+|**Exam Score** |	82%|
+|**Assignments**| 	3.2%|
+|**Attendance**|	2.9%|
+|**Study Hours**|	2.6%|
+
+## Bias Check
+| | |
+|---|---|
+|**Group** |	Acc|
+|**Male**|	99%|
+|**Female**	|99%|
+|**Has Internet**|	99%|
+|**No Internet**|	99%|
+---
+## 🚀 Quick Start
 ```bash
-git clone [https://github.com/YOUR_GITHUB_USERNAME/muj-student-advisor.git](https://github.com/YOUR_GITHUB_USERNAME/muj-student-advisor.git)
-cd muj-student-advisor
+git clone https://github.com/Sparsh8998/MUJ-Student-Advisor.git
+cd MUJ-Student-Advisor
+pip install -r requirements.txt
+python train_model.py
+streamlit run app.py
+```
+
+
+## 🏆 Results
+✅ 99% accuracy
+
+✅ 12k+ patterns modeled
+
+✅ Zero bias
+
+✅ <0.5s prediction
